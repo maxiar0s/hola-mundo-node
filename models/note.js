@@ -1,8 +1,11 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
 mongoose.set("strictQuery", false);
 
 const url = process.env.MONGODB_URI;
+
+console.log("Environment variables:", process.env);
 
 console.log("connecting to", url);
 
